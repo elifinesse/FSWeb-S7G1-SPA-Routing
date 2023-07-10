@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import FilmListesi from "./Filmler/FilmListesi";
+import Film from "./Filmler/Film";
 
 import KaydedilenlerListesi from "./Filmler/KaydedilenlerListesi";
 
@@ -43,6 +44,9 @@ export default function App() {
         <Switch>
           <Route path="/" exact>
             <FilmListesi movies={movieList} />
+          </Route>
+          <Route path="/filmler/:id">
+            <Film />
           </Route>
         </Switch>
       </BrowserRouter>

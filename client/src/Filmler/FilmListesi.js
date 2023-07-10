@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function FilmListesi(props) {
-  const { movieList } = props;
   return (
     <div className="movie-list">
       {props.movies.map((movie) => (
