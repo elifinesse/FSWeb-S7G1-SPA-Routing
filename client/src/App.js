@@ -31,16 +31,16 @@ export default function App() {
   };
 
   return (
-    <div>
-      <KaydedilenlerListesi
-        list={
-          [
-            /* Burası esnek */
-          ]
-        }
-      />
+    <BrowserRouter>
+      <div>
+        <KaydedilenlerListesi
+          list={
+            [
+              /* Burası esnek */
+            ]
+          }
+        />
 
-      <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             <FilmListesi movies={movieList} />
@@ -49,7 +49,7 @@ export default function App() {
             <Film />
           </Route>
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
